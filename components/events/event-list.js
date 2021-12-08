@@ -3,8 +3,15 @@ function EventList(props) {
 	const { items } = props;
 	return (
 		<ul>
-			{items.map((item) => (
-				<EventItem />
+			{items.map((event) => (
+				<EventItem
+					title={event.title}
+					id={event.id}
+					key={event.key}
+					location={event.location}
+					date={event.date}
+					image={event.image}
+				/>
 			))}
 		</ul>
 	);
